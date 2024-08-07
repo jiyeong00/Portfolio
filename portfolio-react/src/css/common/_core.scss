@@ -41,13 +41,13 @@
 /* 가로스크롤 없애기 */
 
 /* 스크롤 애니메이션 */
-html {
-  font-size: 10px;
-  font-family: "Noto Sans KR", sans-serif;
-}
-body {
-  overflow-x: hidden;
-}
+// html {
+//   font-size: 10px;
+//   font-family: "Noto Sans KR", sans-serif;
+// }
+// body {
+//   overflow-x: hidden;
+// }
 
 /* 전체화면 크기 */
 html,
@@ -55,6 +55,28 @@ body,
 .part {
   width: 100%;
 }
+
+/////////////////////////////////////////////////////////
+// 메인 공통
+.wrap {
+  max-width: 71.25rem;
+  margin: 0 auto;
+  padding: 8.5rem 2rem 4rem;
+  text-align: center;
+}
+///////////////////////////////////////////////////////
+/// 글씨
+.core-title{
+span{
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+}
+
 
 ////////////////////////////////////////////////////////
 //글씨
