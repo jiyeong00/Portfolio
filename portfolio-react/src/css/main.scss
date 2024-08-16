@@ -117,6 +117,7 @@
       display: flex;
       .swiper-img {
         flex: 1;
+        margin-right: 3rem;
         img{
             width: 100%;
         }
@@ -124,6 +125,7 @@
       }
       .projects-txt {
         flex: 1;
+        width: calc(50% - 3rem);
       }
     }
   }
