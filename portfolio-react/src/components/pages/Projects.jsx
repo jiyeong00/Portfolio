@@ -21,12 +21,6 @@ function Projects(props) {
 
   return (
     <div className="part projects">
-      <div
-        className="swiper-button-prev"
-        onClick={() => {
-          myRef.current.slidePrev();
-        }}
-      ></div>
       <div className="projects-wrap wrap">
         <div className="projects-tit core-title">
           <span>PROJECTS</span>
@@ -63,6 +57,12 @@ function Projects(props) {
                         <strong>주요기능</strong>
                         <span>{v.desc}</span>
                       </div>
+                      <div className="project-git">
+                        <strong>GitHub</strong>
+                        <span>
+                          <a href={v.git} target="_blank"  style={{color:"#80bfe9"}}>신한화구 GitHub 페이지</a>
+                        </span>
+                      </div>
                       <div className="project-tech">
                         <strong>사용기술</strong>
                         <span>{v.tech}</span>
@@ -83,12 +83,6 @@ function Projects(props) {
         {/* projects-box */}
       </div>
       {/* <!-- projects-wrap --> */}
-      <div
-        className="swiper-button-next"
-        onClick={() => {
-          myRef.current.slideNext();
-        }}
-      ></div>
     </div>
     // part
   );
