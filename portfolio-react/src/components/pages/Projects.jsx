@@ -13,6 +13,9 @@ import "../../css/projects.scss";
 // data
 import projectData from "../data/projects_data";
 
+// jquery
+import $ from "jquery";
+
 function Projects(props) {
   const selData = projectData;
 
@@ -51,7 +54,18 @@ function Projects(props) {
                     <img src="/img/1 (1).jpg" alt="으아아아" />
                   </div>
                   <div className="projects-txt" style={{ textAlign: "left" }}>
-                    <span className="protxt-span">{v.txt}</span>
+                    <span className="protxt-span">
+                      {/* {v.txt} */}
+                      <p>
+                        {/* 문자데이터 중 "^"로 잘라서 배열로 만들고 각각 p태그로 랩핑해준다 */}
+                        {v.txt.split("^").map((v, i) => (
+                          <>
+                            <p key={i}>{v}</p>
+                            
+                          </>
+                        ))}
+                      </p>
+                    </span>
                     <div className="projects-desc">
                       <div className="project-functions">
                         <strong>주요기능</strong>
@@ -60,7 +74,13 @@ function Projects(props) {
                       <div className="project-git">
                         <strong>GitHub</strong>
                         <span>
-                          <a href={v.git} target="_blank"  style={{color:"#80bfe9"}}>신한화구 GitHub 페이지</a>
+                          <a
+                            href={v.git}
+                            target="_blank"
+                            style={{ color: "#80bfe9" }}
+                          >
+                            신한화구 GitHub 페이지
+                          </a>
                         </span>
                       </div>
                       <div className="project-tech">
