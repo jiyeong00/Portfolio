@@ -56,15 +56,15 @@ function Projects(props) {
                   <div className="projects-txt" style={{ textAlign: "left" }}>
                     <span className="protxt-span">
                       {/* {v.txt} */}
-                      <p>
-                        {/* 문자데이터 중 "^"로 잘라서 배열로 만들고 각각 p태그로 랩핑해준다 */}
+                      <div>
+                        {/* 문자데이터 중 "^"로 잘라서 배열로 만들고 각각 p태그로 랩핑해줌 */}
                         {v.txt.split("^").map((v, i) => (
                           <>
                             <p key={i}>{v}</p>
                             
                           </>
                         ))}
-                      </p>
+                      </div>
                     </span>
                     <div className="projects-desc">
                       <div className="project-functions">

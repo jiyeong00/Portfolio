@@ -1,6 +1,9 @@
 import React from "react";
 import Projects from "./Projects";
 
+// 제이쿼리
+import $ from "jquery";
+
 // css
 import "../../css/main.scss";
 
@@ -15,7 +18,13 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
+// data
+import skillsData from "../data/skills_data";
+
 function Main(props) {
+  const selData = skillsData;
+  console.log(selData.front.skillsName);
+  // console.log($(".skills h3").text());
   return (
     <section className="mainArea">
       <div className="part main">
@@ -57,7 +66,10 @@ function Main(props) {
             </li>
             <li>
               <div className="list-wrap">
-                <FontAwesomeIcon className="font-awesome" icon={faLocationDot} />
+                <FontAwesomeIcon
+                  className="font-awesome"
+                  icon={faLocationDot}
+                />
                 <div className="about-info">
                   <strong>주소지</strong>
                   <span>서울특별시 성동구</span>
@@ -66,11 +78,14 @@ function Main(props) {
             </li>
             <li>
               <div className="list-wrap">
-                <FontAwesomeIcon className="font-awesome" icon={faPhoneVolume} />
+                <FontAwesomeIcon
+                  className="font-awesome"
+                  icon={faPhoneVolume}
+                />
                 <div className="about-info">
                   <strong>연락처</strong>
                   <span>010-3449-5231</span>
-                </div>  
+                </div>
               </div>
             </li>
             <li>
@@ -87,7 +102,11 @@ function Main(props) {
                 <FontAwesomeIcon className="font-awesome" icon={faPen} />
                 <div className="about-info">
                   <strong>학력</strong>
-                  <span>배화여자대학교<br/>SW보안융합학과</span>
+                  <span>
+                    배화여자대학교
+                    <br />
+                    SW보안융합학과
+                  </span>
                 </div>
               </div>
             </li>
@@ -110,19 +129,21 @@ function Main(props) {
             <li>
               <h3>Frontend</h3>
               <ol>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>Sass</li>
-                <li>React</li>
+                {skillsData.front.skillsName.map((v, i) => (
+                  <li key={i}>
+                    <img src={`/img/front-${i + 1}.png`} alt={v} />
+                  </li>
+                ))}
               </ol>
             </li>
             <li>
+            <h3>Backend</h3>
               <ol>
-                <h3>Backend</h3>
-                <li>pSQL</li>
-                <li>mySQL</li>
-                <li>jQuery</li>
+                {skillsData.back.skillsName.map((v, i) => (
+                  <li key={i}>
+                    <img src={`/img/back-${i + 1}.png`} alt={v} />
+                  </li>
+                ))}
               </ol>
             </li>
           </ul>

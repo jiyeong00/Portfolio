@@ -96,6 +96,17 @@
       font-size: 1.5rem;
       color: #f4623a;
     }
+    ol {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
+      li{
+        width: 100%;
+      }
+      img {
+        height: 130px;
+      }
+    }
   }
 }
 //////////////////////////////////////
@@ -118,10 +129,9 @@
       .swiper-img {
         flex: 1;
         margin-right: 3rem;
-        img{
-            width: 100%;
+        img {
+          width: 100%;
         }
-
       }
       .projects-txt {
         flex: 1;
