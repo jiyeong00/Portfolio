@@ -98,13 +98,13 @@
     }
     ol {
       display: grid;
-      gap: 10px;
+      gap: 20px;
       grid-template-columns: repeat(4, 1fr);
       li{
         width: 100%;
       }
       img {
-        height: 130px;
+        width: 100%;
       }
     }
   }
