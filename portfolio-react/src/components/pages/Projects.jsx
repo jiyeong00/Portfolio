@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { Fragment, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -59,10 +59,10 @@ function Projects(props) {
                       <div>
                         {/* 문자데이터 중 "^"로 잘라서 배열로 만들고 각각 p태그로 랩핑해줌 */}
                         {v.txt.split("^").map((v, i) => (
-                          <>
-                            <p key={i}>{v}</p>
+                          <React.Fragment key={i}>
+                            <p>{v}</p>
                             
-                          </>
+                          </React.Fragment>
                         ))}
                       </div>
                     </span>
