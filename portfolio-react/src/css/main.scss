@@ -142,8 +142,23 @@
 }
 ///////////////////////////////////////////
 /// 미디어
+@media screen and (max-width: 1120px) {
+  .skills ul > li ol {
+    grid-template-columns: repeat(3, 1fr);
+}
+}
 @media screen and (max-width: 990px) {
   .about .about-list {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+@media screen and (max-width: 945px) {
+  .skills ul > li ol {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+@media screen and (max-width: 682px) {
+  .skills ul > li ol {
+    grid-template-columns: repeat(1, 1fr);
+}
 }
