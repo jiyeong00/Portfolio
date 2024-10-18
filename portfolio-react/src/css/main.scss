@@ -162,3 +162,8 @@
     grid-template-columns: repeat(1, 1fr);
 }
 }
+@media screen and (max-width: 550px) {
+  .about .about-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
