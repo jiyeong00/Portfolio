@@ -94,3 +94,42 @@ h1.logo {
   font-weight: 700;
   color: #e30613;
 }
+
+
+/// 모바일 메뉴 버튼///////////////////
+.nav-img {
+  cursor: pointer;
+  display: block;
+  margin-right: 1rem;
+  .fa-xmark{
+    color: #888;
+    display: none;
+    &.on{
+      display: block;
+      font-size: 2rem;
+    }
+  }
+  img.on{
+    display: none;
+  }
+}
+
+.drop_menu{
+  display : none;
+}
+.drop_menu.on{
+  display : block;
+  position: absolute;
+  top: 70px;
+
+  width: 100%;
+  max-height: 140px;
+  background-color: white;
+  transition: max-height .2s ease;
+  ul{
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+}

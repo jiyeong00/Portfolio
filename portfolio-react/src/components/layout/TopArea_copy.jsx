@@ -8,7 +8,7 @@ import mFn from "../func/my_function";
 import { openMenu, closeMenu } from "../func/top_area";
 import TopMenu_M from "../modules/TopMenu_M";
 
-//메뉴데이터
+//데이터
 import menuData from "../data/menu_data";
 
 function TopArea(props) {
@@ -77,6 +77,8 @@ function TopArea(props) {
   }, []);
   ////스크롤시 헤더 색 변경////////////////////////////////////
 
+  console.log(menuData.id);
+
   return (
     <header id="header-area">
       <header className="header-area">
@@ -85,19 +87,52 @@ function TopArea(props) {
         {width > 990 && (
           <nav className="gnb">
             <ul>
-              {menuData.map((v, i) => (
-                <li key={i}>
-                  <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault(); // 링크 기본 동작 방지
-                      topScroll(v.id);
-                    }}
-                  >
-                    {v.name}
-                  </a>
-                </li>
-              ))}
+              {/* {menuData.map((v,i)=>(
+              ))} */}
+              <li>
+              <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // 링크 기본 동작 방지
+                    topScroll("about");
+                  }}
+                >
+                  About me
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // 링크 기본 동작 방지
+                    topScroll("about");
+                  }}
+                >
+                  About me
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    topScroll("skills");
+                  }}
+                >
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    topScroll("projects");
+                  }}
+                >
+                  Projects
+                </a>
+              </li>
             </ul>
           </nav>
         )}
@@ -112,27 +147,11 @@ function TopArea(props) {
               />
               <FontAwesomeIcon icon={faXmark} className="fa-xmark" />
             </div>
-            <div className="drop_menu">
-              <ul>
-                {menuData.map((v, i) => (
-                  <li key={i}>
-                    <a
-                      href="#"
-                      onClick={(e) => {
-                        e.preventDefault(); // 링크 기본 동작 방지
-                        topScroll(v.id);
-                      }}
-                    >
-                      {v.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <div className="drop_menu"></div>
           </>
         )}
       </header>
-      <TopMenu_M />
+      <TopMenu_M/>
     </header>
   );
 }

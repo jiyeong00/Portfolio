@@ -8,15 +8,17 @@ function openMenu(){
     $(".fa-xmark").toggleClass("on");
     $(".nav-img img").toggleClass("on");
     // console.log("열렸따!");
+
+    $(".drop_menu").toggleClass("on");
     
-    // 클릭시 검은바탕
-    $(".topMenu-M-gnb").toggleClass("on");
+
 };
 function closeMenu(){
     $(".fa-xmark").removeClass("on");
     $(".nav-img img").removeClass("on");
 
-    $(".topMenu-M-gnb").removeClass("on");
+    $(".drop_menu").removeClass("on");
+
 };
 
 export {openMenu,closeMenu};
