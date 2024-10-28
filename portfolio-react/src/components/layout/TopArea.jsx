@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faXmark,faBars } from "@fortawesome/free-solid-svg-icons";
 
 import mFn from "../func/my_function";
 import { openMenu, closeMenu } from "../func/top_area";
@@ -106,10 +106,11 @@ function TopArea(props) {
           <>
             {/* 모바일 햄버거버튼 */}
             <div className="nav-img" onClick={openMenu}>
-              <img
+              {/* <img
                 src={process.env.PUBLIC_URL + "/img/menu_w.png"}
                 alt="메뉴버튼 이미지"
-              />
+              /> */}
+              <FontAwesomeIcon icon={faBars} className="fa-bars"/>
               <FontAwesomeIcon icon={faXmark} className="fa-xmark" />
             </div>
             <div className="drop_menu">

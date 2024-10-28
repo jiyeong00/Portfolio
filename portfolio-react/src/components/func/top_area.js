@@ -6,7 +6,7 @@ import $ from "jquery";
 function openMenu(){
     // 클릭시 이미지 변경
     $(".fa-xmark").toggleClass("on");
-    $(".nav-img img").toggleClass("on");
+    $(".fa-bars").toggleClass("on");
     // console.log("열렸따!");
 
     $(".drop_menu").toggleClass("on");
@@ -15,7 +15,7 @@ function openMenu(){
 };
 function closeMenu(){
     $(".fa-xmark").removeClass("on");
-    $(".nav-img img").removeClass("on");
+    $(".fa-bars").removeClass("on");
 
     $(".drop_menu").removeClass("on");
 

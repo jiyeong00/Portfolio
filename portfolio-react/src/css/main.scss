@@ -68,6 +68,10 @@
     background-color: #f0c9c9;
     font-weight: 700;
     text-align: center;
+    a:hover {
+      font-weight: 700;
+      color: #e30613;
+    }
   }
 }
 //////////////////////////////////////
@@ -100,7 +104,7 @@
       display: grid;
       gap: 20px;
       grid-template-columns: repeat(4, 1fr);
-      li{
+      li {
         width: 100%;
       }
       img {
@@ -145,7 +149,7 @@
 @media screen and (max-width: 1120px) {
   .skills ul > li ol {
     grid-template-columns: repeat(3, 1fr);
-}
+  }
 }
 @media screen and (max-width: 990px) {
   .about .about-list {
@@ -155,12 +159,12 @@
 @media screen and (max-width: 945px) {
   .skills ul > li ol {
     grid-template-columns: repeat(2, 1fr);
-}
+  }
 }
 @media screen and (max-width: 682px) {
   .skills ul > li ol {
     grid-template-columns: repeat(1, 1fr);
-}
+  }
 }
 @media screen and (max-width: 550px) {
   .about .about-list {

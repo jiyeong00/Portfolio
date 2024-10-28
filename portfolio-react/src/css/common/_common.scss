@@ -35,7 +35,7 @@
 
   box-sizing: border-box;
   padding: 20px;
-  &>a{
+  & > a {
     flex: 1;
   }
 
@@ -95,41 +95,93 @@ h1.logo {
   color: #e30613;
 }
 
-
 /// 모바일 메뉴 버튼///////////////////
 .nav-img {
   cursor: pointer;
   display: block;
   margin-right: 1rem;
-  .fa-xmark{
+  .fa-xmark {
     color: #888;
     display: none;
-    &.on{
+    font-size: 2rem;
+    &.on {
       display: block;
-      font-size: 2rem;
     }
   }
-  img.on{
+  .fa-bars {
+    color: #888;
+    display: block;
+    font-size: 2rem;
+    &.on {
+      display: none;
+    }
+  }
+}
+
+.drop_menu {
+  visibility: hidden; /* 처음에는 숨김 */
+  opacity: 0; /* 불투명도 0 */
+  max-height: 0; /* 높이 0 */
+  overflow: hidden; /* 넘치는 콘텐츠 숨김 */
+  transition: visibility 0s 0.2s, opacity 0s ease-out, max-height 0.2s ease-out; /* 전환 설정 */
+  li{
     display: none;
   }
 }
 
-.drop_menu{
-  display : none;
-}
-.drop_menu.on{
-  display : block;
+.drop_menu.on {
+  visibility: visible; /* 보이게 설정 */
+  opacity: 1; /* 불투명도 1 */
+  max-height: 140px; /* 최대 높이 설정 */
+  transition: visibility 0s 0s, opacity 0s ease-out, max-height 0.2s ease-out; /* 전환 설정 */
   position: absolute;
   top: 70px;
-
   width: 100%;
-  max-height: 140px;
   background-color: white;
-  transition: max-height .2s ease;
-  ul{
-    padding: 0 2rem;
+
+  ul {
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 13px;
+  }
+  li{
+    display: block;
+  }
+  li a:hover {
+    font-weight: 700;
+    color: #e30613;
+  }
+}
+// .drop_menu {
+//   display: none;
+//   max-height: 0px;
+//   transition: max-height 3s ease-out;
+// }
+// .drop_menu.on {
+//   display: block;
+//   position: absolute;
+//   top: 70px;
+
+//   width: 100%;
+//   max-height: 140px;
+//   background-color: white;
+//   transition: max-height 3s ease-out;
+//   ul {
+//     padding: 1rem 2rem;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 13px;
+//   }
+//   li a:hover {
+//     font-weight: 700;
+//     color: #e30613;
+//   }
+// }
+
+///////////////////////////////////////////////////
+@media screen and (max-width: 990px) {
+  #header-area {
+    background-color: white;
   }
 }
