@@ -31,7 +31,7 @@ const projectData = [
     desc: "개인 사물함을 사용하는 사용자 어플리케이션, 아두이노 관련 기능, DB연결 및 php를 통한 데이터 변경",
     tech: "JAVA, PostgreSQL PHP, Android Studio, 아두이노IDE, XAMPP",
     stit:"보담보담 GitHub 페이지",
-    git: "https://github.com/jiyeong00/FED-RF-2nd-PJ-Yu_ji_yeong/tree/main/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8",
+    git: "https://github.com/jiyeong00/FED-RF-2nd-PJ-Yu_ji_yeong/tree/main/%EB%B3%B4%EB%8B%B4%EB%B3%B4%EB%8B%B4",
   },
 ];
 
