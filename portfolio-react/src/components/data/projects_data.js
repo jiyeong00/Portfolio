@@ -9,7 +9,7 @@ const projectData = [
     desc: " 로그인,회원가입, 로그인 여부에 따른 위시리스트 및 게시판 사용 가능 여부 처리",
     tech: "React.js, jQuary, JS, Sass",
     stit:"신한화구 GitHub 페이지",
-    git: "https://github.com/jiyeong00/FED-RF-2nd-PJ-Yu_ji_yeong/tree/main/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8",
+    git: "https://github.com/jiyeong00/FED-RF-2nd-PJ-Yu_ji_yeong/tree/main/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8(%EC%8B%A0%ED%95%9C%ED%99%94%EA%B5%AC)",
   },
   {
     idx: "2",

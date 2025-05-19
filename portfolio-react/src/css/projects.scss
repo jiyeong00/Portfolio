@@ -17,3 +17,13 @@
     padding-bottom: 2rem;
   }
 }
+
+//불릿 관련
+.swiper-button-prev, .swiper-button-next{
+  height: 100%;
+  top: -40%;
+}
+.swiper-pagination{
+  display: flex;
+  justify-content:flex-end;
+}
