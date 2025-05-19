@@ -60,15 +60,18 @@ function Projects(props) {
                         {/* 문자데이터 중 "^"로 잘라서 배열로 만들고 각각 p태그로 랩핑해줌 */}
                         {v.txt.split("^").map((v, i) => (
                           <React.Fragment key={i}>
-                            <p>{v}</p>
-                            
+                            <p style={{ marginTop: "1em" }}>{v}</p>
                           </React.Fragment>
                         ))}
                       </div>
                     </span>
                     <div className="projects-desc">
                       <div className="project-functions">
-                        <strong>주요기능</strong>
+                        {
+                        v.mem=="team"?
+                        <strong>담당 기능</strong> : 
+                        <strong>주요 기능</strong>
+                        }
                         <span>{v.desc}</span>
                       </div>
                       <div className="project-git">
@@ -79,7 +82,7 @@ function Projects(props) {
                             target="_blank"
                             style={{ color: "#80bfe9" }}
                           >
-                            신한화구 GitHub 페이지
+                            {v.stit}
                           </a>
                         </span>
                       </div>
