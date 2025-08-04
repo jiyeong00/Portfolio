@@ -52,6 +52,7 @@ function Projects(props) {
                 <div className="projects-info">
                   <div className="swiper-img">
                     <img src="/img/1 (1).jpg" alt="으아아아" />
+                    <project_img/>
                   </div>
                   <div className="projects-txt" style={{ textAlign: "left" }}>
                     <span className="protxt-span">
