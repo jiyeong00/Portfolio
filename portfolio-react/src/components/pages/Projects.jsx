@@ -54,6 +54,7 @@ function Projects(props) {
                   <div className="swiper-img">
                     {/*<img src="/img/1 (1).jpg" alt="으아아아" />*/}
                     {/* 이미지 슬라이더 */}
+                    {/* 이미지 슬라이더 */}
                     <Swiper
                       spaceBetween={10}
                       slidesPerView={1}
