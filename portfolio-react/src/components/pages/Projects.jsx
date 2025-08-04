@@ -52,8 +52,7 @@ function Projects(props) {
                 <span>{v.date}</span>
                 <div className="projects-info">
                   <div className="swiper-img">
-                    //
-                    <img src="/img/1 (1).jpg" alt="으아아아" />
+                    {/*<img src="/img/1 (1).jpg" alt="으아아아" />*/}
                     {/* 이미지 슬라이더 */}
                     <Swiper
                       spaceBetween={10}
