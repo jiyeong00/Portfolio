@@ -12,6 +12,7 @@ import "../../css/projects.scss";
 
 // data
 import projectData from "../data/projects_data";
+import imgData from "../data/project_img_data";
 
 // jquery
 import $ from "jquery";
@@ -51,8 +52,25 @@ function Projects(props) {
                 <span>{v.date}</span>
                 <div className="projects-info">
                   <div className="swiper-img">
+                    //
                     <img src="/img/1 (1).jpg" alt="으아아아" />
-                    <project_img/>
+                    {/* 이미지 슬라이더 */}
+                    <Swiper
+                      spaceBetween={10}
+                      slidesPerView={1}
+                      pagination={{ clickable: true }}
+                    >
+                      {
+                        // 해당 슬라이드 id에 맞는 이미지 데이터 가져오기
+                        (
+                          imgData.find((img) => img.id === v.id)?.imgs || []
+                        ).map((img, idx) => (
+                          <SwiperSlide key={idx}>
+                            <img src={img} alt={`project-${v.id}-${idx}`} />
+                          </SwiperSlide>
+                        ))
+                      }
+                    </Swiper>
                   </div>
                   <div className="projects-txt" style={{ textAlign: "left" }}>
                     <span className="protxt-span">
@@ -68,11 +86,11 @@ function Projects(props) {
                     </span>
                     <div className="projects-desc">
                       <div className="project-functions">
-                        {
-                        v.mem=="team"?
-                        <strong>담당 기능</strong> : 
-                        <strong>주요 기능</strong>
-                        }
+                        {v.mem == "team" ? (
+                          <strong>담당 기능</strong>
+                        ) : (
+                          <strong>주요 기능</strong>
+                        )}
                         <span>{v.desc}</span>
                       </div>
                       <div className="project-git">
