@@ -52,14 +52,16 @@ function Projects(props) {
                 <span>{v.date}</span>
                 <div className="projects-info">
                   <div className="swiper-img">
-                    <img src="/img/1 (1).jpg" alt="으아아아" />
+                    {/* <img src="/img/1 (1).jpg" alt="으아아아" /> */}
                     {/* 이미지 슬라이더 */}
-                    {/* <Swiper
+                    <Swiper
                       spaceBetween={10}
                       slidesPerView={1}
                       pagination={{ clickable: true }}
                     >
-                      {
+                      <img src="/img/1 (1).jpg" alt="으아아아" />
+                      <img src="/img/1 (1).jpg" alt="으아아아" />
+                      {/* {
                         // 해당 슬라이드 id에 맞는 이미지 데이터 가져오기
                         (
                           imgData.find((img) => img.id === v.id)?.imgs || []
@@ -68,8 +70,8 @@ function Projects(props) {
                             <img src={img} alt={`project-${v.id}-${idx}`} />
                           </SwiperSlide>
                         ))
-                      }
-                    </Swiper> */}
+                      } */}
+                    </Swiper>
                   </div>
                   <div className="projects-txt" style={{ textAlign: "left" }}>
                     <span className="protxt-span">
