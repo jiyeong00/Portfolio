@@ -74,6 +74,7 @@ function Projects(props) {
                         (img, idx) => (
                           <SwiperSlide key={idx}>
                             <img src={img} alt={`project-${v.id}-${idx}`} />
+                            <span>{img.id + v.id + idx}</span>
                           </SwiperSlide>
                         )
                       )}
