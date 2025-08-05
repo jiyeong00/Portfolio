@@ -1,7 +1,7 @@
 const imgData = [
   {
     id: "project1",
-    imgs: ["/img/img1.jpg", "/img/img2.jpg", "/img/img3.jpg"],
+    imgs: ["/img/1.jpg", "/img/2.jpg", "/img/3.jpg"],
   },
   {
     id: "project2",

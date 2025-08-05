@@ -58,7 +58,7 @@ function Projects(props) {
                       slidesPerView={1}
                       //   하단불릿
                       pagination={{
-                        el: ".swiper-pagination",
+                        el: ".img-swiper-pagination",
                         clickable: true,
                       }}
                       speed={1000}
@@ -69,8 +69,14 @@ function Projects(props) {
                       // 스와이퍼 사이즈별 슬라이드수 변경!
                       className="imgSwiper"
                     >
-                      <img src="/img/1 (1).jpg" alt="으아아아" />
-                      <img src="/img/1 (1).jpg" alt="으아아아" />
+                      {/* <img src="/img/1 (1).jpg" alt="으아아아" /> */}
+                      {(imgData.find((img) => img.id === v.id)?.imgs || []).map(
+                        (img, idx) => (
+                          <SwiperSlide key={idx}>
+                            <img src={img} alt={`project-${v.id}-${idx}`} />
+                          </SwiperSlide>
+                        )
+                      )}
                       {/* {
                         // 해당 슬라이드 id에 맞는 이미지 데이터 가져오기
                         (
