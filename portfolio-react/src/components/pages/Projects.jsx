@@ -58,7 +58,7 @@ function Projects(props) {
                       slidesPerView={1}
                       //   하단불릿
                       pagination={{
-                        el: ".img-swiper-pagination",
+                        // el: ".swiper-pagination",
                         clickable: true,
                       }}
                       speed={1000}
