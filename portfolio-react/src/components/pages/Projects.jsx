@@ -78,16 +78,6 @@ function Projects(props) {
                           </SwiperSlide>
                         )
                       )}
-                      {/* {
-                        // 해당 슬라이드 id에 맞는 이미지 데이터 가져오기
-                        (
-                          imgData.find((img) => img.id === v.id)?.imgs || []
-                        ).map((img, idx) => (
-                          <SwiperSlide key={idx}>
-                            <img src={img} alt={`project-${v.id}-${idx}`} />
-                          </SwiperSlide>
-                        ))
-                      } */}
                     </Swiper>
                   </div>
                   <div className="projects-txt" style={{ textAlign: "left" }}>
