@@ -27,7 +27,7 @@ function Projects(props) {
     <div className="part projects">
       <div className="projects-wrap wrap">
         <div className="projects-tit core-title">
-          <span>PROJECTS</span>
+          <span>PROJECTS 힛</span>
         </div>
 
         <div className="projects-box">
