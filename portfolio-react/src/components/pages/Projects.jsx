@@ -55,9 +55,19 @@ function Projects(props) {
                     {/* <img src="/img/1 (1).jpg" alt="으아아아" /> */}
                     {/* 이미지 슬라이더 */}
                     <Swiper
-                      spaceBetween={10}
                       slidesPerView={1}
-                      pagination={{ clickable: true }}
+                      //   하단불릿
+                      pagination={{
+                        el: ".swiper-pagination",
+                        clickable: true,
+                      }}
+                      speed={1000}
+                      //   이동버튼
+                      navigation={true}
+                      /* 사용할 모듈을 여기에 적용시킨다 */
+                      modules={[Pagination, Navigation]}
+                      // 스와이퍼 사이즈별 슬라이드수 변경!
+                      className="imgSwiper"
                     >
                       <img src="/img/1 (1).jpg" alt="으아아아" />
                       <img src="/img/1 (1).jpg" alt="으아아아" />
