@@ -52,29 +52,29 @@ function Projects(props) {
                 <span>{v.date}</span>
                 <div className="projects-info">
                   <div className="swiper-img">
-                    {/* <img src="/img/1 (1).jpg" alt="으아아아" /> */}
                     {/* 이미지 슬라이더 */}
                     <Swiper
                       slidesPerView={1}
-                      //   하단불릿
                       pagination={{
-                        // el: ".swiper-pagination",
-                        clickable: true,
+                        clickable: true, // el 제거!
                       }}
                       speed={1000}
-                      //   이동버튼
                       navigation={true}
-                      /* 사용할 모듈을 여기에 적용시킨다 */
                       modules={[Pagination, Navigation]}
-                      // 스와이퍼 사이즈별 슬라이드수 변경!
                       className="imgSwiper"
                     >
-                      {/* <img src="/img/1 (1).jpg" alt="으아아아" /> */}
                       {(imgData.find((img) => img.id === v.id)?.imgs || []).map(
                         (img, idx) => (
                           <SwiperSlide key={idx}>
-                            <img src={img} alt={`project-${v.id}-${idx}`} />
-                            <span>{img.id + v.id + idx}</span>
+                            <img
+                              src={img}
+                              alt={`project-${v.id}-${idx}`}
+                              style={{
+                                width: "100%",
+                                height: "auto",
+                                display: "block",
+                              }}
+                            />
                           </SwiperSlide>
                         )
                       )}
