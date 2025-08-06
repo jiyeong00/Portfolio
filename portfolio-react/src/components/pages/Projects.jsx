@@ -19,6 +19,7 @@ import $ from "jquery";
 
 function Projects(props) {
   const selData = projectData;
+  const selImgData = imgData;
 
   // 컴포넌트 전역변수
   const myRef = useRef(null);
@@ -53,32 +54,15 @@ function Projects(props) {
                 <div className="projects-info">
                   <div className="swiper-img">
                     {/* 이미지 슬라이더 */}
-                    <Swiper
-                      slidesPerView={1}
-                      pagination={{
-                        clickable: true, // el 제거!
-                      }}
-                      speed={1000}
-                      navigation={true}
-                      modules={[Pagination, Navigation]}
-                      className="imgSwiper"
-                    >
-                      {(imgData.find((img) => img.id === v.id)?.imgs || []).map(
-                        (img, idx) => (
-                          <SwiperSlide key={idx}>
-                            <img
-                              src={img}
-                              alt={`project-${v.id}-${idx}`}
-                              style={{
-                                width: "100%",
-                                height: "auto",
-                                display: "block",
-                              }}
-                            />
-                          </SwiperSlide>
-                        )
-                      )}
-                    </Swiper>
+                    {selImgData.map((v, i) => (
+                      <SwiperSlide key={i}>
+                        {
+                          (console.log("확인용", v, i),
+                          console.log("이미지 데이터", selImgData))
+                          // 3개의 데이터가 각각 3번씩 뜸 큰 문제 없어보이는데 일단 ㄱ
+                        }
+                      </SwiperSlide>
+                    ))}
                   </div>
                   <div className="projects-txt" style={{ textAlign: "left" }}>
                     <span className="protxt-span">

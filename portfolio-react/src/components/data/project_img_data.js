@@ -1,13 +1,18 @@
 const imgData = [
   {
-    id: "project1",
-    imgs: ["/img/1.jpg", "/img/2.jpg", "/img/3.jpg"],
+    title: "Shinhan art",
+    img:["1.jpg","2.jpg","3.jpg"],
   },
-  {
-    id: "project2",
-    imgs: ["/img/4.jpg", "/img/5.jpg"],
+    {
+    title: "Sola Sysyem",
+    img:["1.jpg","2.jpg","3.jpg"],
   },
-];
+    {
+    title: "보담보담",
+    img:["1.jpg","2.jpg","3.jpg"],
+  },
+
+]
 
 // 내보내기 //////////
 export default imgData;
