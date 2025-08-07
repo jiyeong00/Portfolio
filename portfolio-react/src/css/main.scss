@@ -1,6 +1,32 @@
 ///메인 css
 
 // 메인 첫번째 제목
+// .main {
+//   background-color: antiquewhite;
+//   h1 {
+//     font-family: "Black Han Sans", sans-serif;
+//     font-weight: 400;
+//     font-size: 4rem;
+//     // color: #fff;
+//     word-break: keep-all;
+//   }
+//   .hr-tag {
+//     width: 3.25rem;
+//     height: 0;
+//     margin: 1.5rem auto;
+//     border: none;
+//     border-top: 0.2rem solid #f4623a;
+//     opacity: 1;
+//   }
+//   h2 {
+//     margin: 0 auto 2rem;
+//     font-weight: 400;
+//     font-size: 1.25rem;
+//     // color: hsla(0, 0%, 100%, .75);
+//     line-height: 1.5;
+//   }
+// }
+
 .main {
   background-color: antiquewhite;
   h1 {
@@ -18,12 +44,22 @@
     border-top: 0.2rem solid #f4623a;
     opacity: 1;
   }
-  h2 {
-    margin: 0 auto 2rem;
-    font-weight: 400;
-    font-size: 1.25rem;
-    // color: hsla(0, 0%, 100%, .75);
-    line-height: 1.5;
+
+  .intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    strong {
+      color: #2a6ecf;
+    }
   }
 }
 

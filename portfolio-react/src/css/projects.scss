@@ -35,3 +35,30 @@
   position: relative;
   z-index: 10;
 }
+
+.projects-info {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .swiper-img {
+    flex: 1 1 50%;
+    max-width: 500px;
+    .imgSwiper {
+      width: 100%;
+      .swiper-slide {
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .projects-txt {
+    flex: 1 1 45%;
+  }
+}

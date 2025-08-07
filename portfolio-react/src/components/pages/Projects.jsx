@@ -54,18 +54,26 @@ function Projects(props) {
                 <div className="projects-info">
                   <div className="swiper-img">
                     {/* 이미지 슬라이더 */}
-                    {selImgData.map((e, i) => (
-                      <SwiperSlide key={i}>
-                        {/* {
-                          (console.log("확인용", v, i),
-                          console.log("뭘까", v,v.title,"으아",e,e.title,e.img))               
-                        } */}
-                        {v.title===e.title && (
-                          <img src={`/img/${i + 1}.jpg`} alt={v} />
-                        )}
-                      
-                      </SwiperSlide>
-                    ))}
+                    <Swiper
+                      slidesPerView={1}
+                      pagination={{ clickable: true }}
+                      navigation={true}
+                      speed={1000}
+                      modules={[Pagination, Navigation]}
+                      className="imgSwiper"
+                    >
+                      {selImgData
+                        .find((e) => e.title === v.title)
+                        ?.img.map((fileName, idx) => (
+                          <SwiperSlide key={idx}>
+                            <img
+                              src={`/img/${fileName}`}
+                              alt={`project-${v.title}-${idx}`}
+                            />
+                          </SwiperSlide>
+                        ))}
+                    </Swiper>
+                    {/* 여기까지 이미지 슬라이더 */}
                   </div>
                   <div className="projects-txt" style={{ textAlign: "left" }}>
                     <span className="protxt-span">
