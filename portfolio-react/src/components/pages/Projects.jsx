@@ -54,13 +54,16 @@ function Projects(props) {
                 <div className="projects-info">
                   <div className="swiper-img">
                     {/* 이미지 슬라이더 */}
-                    {selImgData.map((v, i) => (
+                    {selImgData.map((e, i) => (
                       <SwiperSlide key={i}>
-                        {
+                        {/* {
                           (console.log("확인용", v, i),
-                          console.log("이미지 데이터", selImgData))
-                          // 3개의 데이터가 각각 3번씩 뜸 큰 문제 없어보이는데 일단 ㄱ
-                        }
+                          console.log("뭘까", v,v.title,"으아",e,e.title,e.img))               
+                        } */}
+                        {v.title===e.title && (
+                          <img src={`/img/${i + 1}.jpg`} alt={v} />
+                        )}
+                      
                       </SwiperSlide>
                     ))}
                   </div>
