@@ -56,6 +56,7 @@ function Projects(props) {
                     {/* 이미지 슬라이더 */}
                     <Swiper
                       slidesPerView={1}
+                      autoHeight={true}
                       pagination={{ clickable: true }}
                       navigation={true}
                       speed={1000}

@@ -1,7 +1,7 @@
 const imgData = [
   {
     title: "Shinhan art",
-    img:["1.jpg","2.jpg","3.jpg"],
+    img:["Shinhan1.png","Shinhan2.png","Shinhan3.png","Shinhan4.png","Shinhan5.png","Shinhan6.png",],
   },
     {
     title: "Sola Sysyem",

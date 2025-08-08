@@ -19,13 +19,14 @@
 }
 
 //불릿 관련
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev,
+.swiper-button-next {
   height: 100%;
   top: -40%;
 }
-.swiper-pagination{
+.swiper-pagination {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
 
 .imgSwiper .swiper-pagination {
@@ -45,6 +46,11 @@
   .swiper-img {
     flex: 1 1 50%;
     max-width: 500px;
+    max-height: 500px;
+    // 이미지 스크롤 관련
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE, Edge */
     .imgSwiper {
       width: 100%;
       .swiper-slide {
