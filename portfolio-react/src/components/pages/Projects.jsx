@@ -24,6 +24,10 @@ function Projects(props) {
   // 컴포넌트 전역변수
   const myRef = useRef(null);
 
+  // 버튼 DOM 참조
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   return (
     <div className="part projects">
       <div className="projects-wrap wrap">
@@ -52,29 +56,48 @@ function Projects(props) {
                 <h2>{v.title}</h2>
                 <span>{v.date}</span>
                 <div className="projects-info">
-                  <div className="swiper-img">
-                    {/* 이미지 슬라이더 */}
-                    <Swiper
-                      slidesPerView={1}
-                      autoHeight={true}
-                      pagination={{ clickable: true }}
-                      navigation={true}
-                      speed={1000}
-                      modules={[Pagination, Navigation]}
-                      className="imgSwiper"
-                    >
-                      {selImgData
-                        .find((e) => e.title === v.title)
-                        ?.img.map((fileName, idx) => (
-                          <SwiperSlide key={idx}>
-                            <img
-                              src={`/img/${fileName}`}
-                              alt={`project-${v.title}-${idx}`}
-                            />
-                          </SwiperSlide>
-                        ))}
-                    </Swiper>
-                    {/* 여기까지 이미지 슬라이더 */}
+                  <div className="swiper-img-wrap" key={i}>
+                    <div className="swiper-img">
+                      {/* 외부 버튼 */}
+                      <div className="swiper-img-btn">
+                        {/* <div ref={prevRef} className="imgSwiper-button-prev">
+                          Prev
+                        </div>
+                        <div ref={nextRef} className="imgSwiper-button-next">
+                          Next
+                        </div> */}
+                      </div>
+                      
+                      {/* 이미지 슬라이더 */}
+                      <Swiper
+                        slidesPerView={1}
+                        autoHeight={true}
+                        pagination={{ clickable: true }}
+                        navigation={{
+                          prevEl: prevRef.current,
+                          nextEl: nextRef.current,
+                        }}
+                        onBeforeInit={(swiper) => {
+                          swiper.params.navigation.prevEl = prevRef.current;
+                          swiper.params.navigation.nextEl = nextRef.current;
+                        }}
+                        speed={1000}
+                        modules={[Pagination, Navigation]}
+                        className="imgSwiper"
+                      >
+                        {selImgData
+                          .find((e) => e.title === v.title)
+                          ?.img.map((fileName, idx) => (
+                            <SwiperSlide key={idx}>
+                              <img
+                                src={`/img/${fileName}`}
+                                alt={`project-${v.title}-${idx}`}
+                              />
+                            </SwiperSlide>
+                          ))}
+                      </Swiper>
+                      {/* 여기까지 이미지 슬라이더 */}
+                    </div>
                   </div>
                   <div className="projects-txt" style={{ textAlign: "left" }}>
                     <span className="protxt-span">

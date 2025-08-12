@@ -168,7 +168,7 @@
       display: flex;
       .swiper-img {
         flex: 1;
-        margin-right: 3rem;
+        // margin-right: 3rem;
         img {
           width: 100%;
         }
@@ -192,6 +192,26 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+// -------프로젝트
+@media screen and (max-width: 950px) {
+  .projects {
+    .projects-box {
+      .projects-info {
+        flex-direction: column;
+        align-content: space-around;
+        .swiper-img {
+          flex: 0;
+        }
+        .projects-txt {
+          width: 100%;
+        }
+      }
+    } //.projects-box
+  } //.projects
+}
+////////////////////////////////////////
+///
 @media screen and (max-width: 945px) {
   .skills ul > li ol {
     grid-template-columns: repeat(2, 1fr);
