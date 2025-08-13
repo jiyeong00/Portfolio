@@ -38,6 +38,7 @@ function Projects(props) {
         <div className="projects-box">
           <Swiper
             slidesPerView={1}
+            allowTouchMove={false}
             //   하단불릿
             pagination={{
               el: ".swiper-pagination",
@@ -59,15 +60,15 @@ function Projects(props) {
                   <div className="swiper-img-wrap" key={i}>
                     <div className="swiper-img">
                       {/* 외부 버튼 */}
-                      <div className="swiper-img-btn">
-                        {/* <div ref={prevRef} className="imgSwiper-button-prev">
+                      {/* <div className="swiper-img-btn">
+                        <div ref={prevRef} className="imgSwiper-button-prev">
                           Prev
                         </div>
                         <div ref={nextRef} className="imgSwiper-button-next">
                           Next
-                        </div> */}
-                      </div>
-                      
+                        </div>
+                      </div> */}
+
                       {/* 이미지 슬라이더 */}
                       <Swiper
                         slidesPerView={1}
