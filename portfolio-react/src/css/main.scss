@@ -32,7 +32,7 @@
     }
 
     strong {
-      color: #2a6ecf;
+      color: #f4623a;
     }
   }
 }
@@ -200,4 +200,17 @@
   .about .about-list {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+//////////////////////모바일 맞추기
+///
+@media screen and (max-width: 420px) {
+.main {
+  h1 {
+    font-size: 3rem;
+  }
+  .intro-text {
+    font-size: 13px;
+  }
+}
 }
